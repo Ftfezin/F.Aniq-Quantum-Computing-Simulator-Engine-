@@ -13,6 +13,11 @@ Z = np.array([[1, 0],
 Y = np.array([[0, -1j],
               [1j, 0]], dtype=complex)
 
+S = np.array([[1,0],
+              [0, np.exp(1j * np.pi/2)]],dtype=complex)
+
+T = np.array([[1,0],
+              [0, np.exp(1j * np.pi/4)]],dtype=complex)
 
 def apply_gate(qubit,gate):
    

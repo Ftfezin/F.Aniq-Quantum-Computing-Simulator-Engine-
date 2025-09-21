@@ -1,10 +1,23 @@
 import numpy as np
 from qubit import Qubit
-from gates import X,H,Z,Y, apply_gate
+from gates import *
+from bloch import *
 
 q = Qubit()
 print("initial qubit: ", q)
 print("Probabilities:", q.measure_probabilities())
+plot_bloch_sphere(q,title="before gate")
+
+apply_gate(q,H)
+print("After H: ", q.measure_probabilities())
+plot_bloch_sphere(q,title="after gate")
+
+q.measure()
+print("collapsed state probabilities: ", q.measure_probabilities())
+plot_bloch_sphere(q,title="collapse")
+
+
+
 
 # Experiments:
 
